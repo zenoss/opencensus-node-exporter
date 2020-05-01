@@ -41,7 +41,7 @@
     "typescript": "~3.1.0"
   },
   "dependencies": {
-    "@opencensus/core": "^0.0.21",
+    "@opencensus/core": "^0.0.9",
     "node-fetch": "^2.6.0"
   }
 }
