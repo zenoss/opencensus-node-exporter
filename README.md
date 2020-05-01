@@ -59,10 +59,10 @@ the last value of this metric will be sent to Zenoss with a metric name of
 
 ```javascript
 const { globalStats, AggregationType, MeasureUnit, TagMap } = require('@opencensus/core')
-const { ZenossExporter } = require('@zenoss/opencensus-node-exporter')
+const { ZenossStatsExporter } = require('@zenoss/opencensus-node-exporter')
 
 // Setup the Zenoss exporter.
-const exporter = new ZenossExporter({ apiKey: "YOUR-ZENOSS-API-KEY" })
+const exporter = new ZenossStatsExporter({ apiKey: "YOUR-ZENOSS-API-KEY" })
 globalStats.registerExporter(exporter)
 
 // Setup our tags.
