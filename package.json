@@ -1,7 +1,7 @@
 {
   "name": "@zenoss/opencensus-node-exporter",
   "version": "0.0.1",
-  "description": "An OpenCensus stats exporter for Zenoss.",
+  "description": "An OpenCensus Node.js stats exporter for Zenoss.",
   "author": "Zenoss, Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -10,6 +10,7 @@
   },
   "keywords": [
     "metrics",
+    "node",
     "nodejs",
     "opencensus",
     "stats",

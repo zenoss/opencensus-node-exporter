@@ -19,7 +19,7 @@ have an API key, add the following to your Node.js application.
 For Javascript:
 ```javascript
 const { globalStats } = require("@opencensuscore")
-const { ZenossStatsExporter } = require("@zenoss/opencensus-exporter")
+const { ZenossStatsExporter } = require("@zenoss/opencensus-node-exporter")
 
 const exporter = new ZenossStatsExporter({ apiKey: "YOUR-ZENOSS-API-KEY" })
 globalStats.registerExporter(exporter)
@@ -28,7 +28,7 @@ globalStats.registerExporter(exporter)
 For TypeScript:
 ```typescript
 import { globalStats } from "@opencensus/core";
-import { ZenossStatsExporter } from "@zenoss/opencensus-exporter"
+import { ZenossStatsExporter } from "@zenoss/opencensus-node-exporter"
 
 const exporter = new ZenossStatsExporter({ apiKey: "YOUR-ZENOSS-API-KEY" })
 globalStats.registerExporter(exporter)
@@ -36,7 +36,7 @@ globalStats.registerExporter(exporter)
 
 Be sure to install the exporter. For `npm` use the following:
 ```shell script
-npm install @zenoss/opencensus-exporter
+npm install @zenoss/opencensus-node-exporter
 ```
 
 ## Options
@@ -59,7 +59,7 @@ the last value of this metric will be sent to Zenoss with a metric name of
 
 ```javascript
 const { globalStats, AggregationType, MeasureUnit, TagMap } = require('@opencensus/core')
-const { ZenossExporter } = require('@zenoss/opencensus-exporter')
+const { ZenossExporter } = require('@zenoss/opencensus-node-exporter')
 
 // Setup the Zenoss exporter.
 const exporter = new ZenossExporter({ apiKey: "YOUR-ZENOSS-API-KEY" })
