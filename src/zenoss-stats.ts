@@ -171,12 +171,9 @@ export class ZenossStatsExporter implements StatsEventListener {
         if (taggedMetrics.length > 0) {
             await this.sendTaggedMetrics(taggedMetrics);
         }
-
-        this.logger.info("!!! ZenossStatsExporter.export() - end", taggedMetrics.length)
     }
 
     private async sendTaggedMetrics(taggedMetrics: TaggedMetric[]) {
-        this.logger.info("!!! ZenossStatsExporter.sendTaggedMetrics() - begin", taggedMetrics.length)
         const metricsUrl = this.address + "/v1/data-receiver/metrics";
         const headers: {[key: string]: string} = {};
         if (this.apiKey) {
@@ -205,8 +202,6 @@ export class ZenossStatsExporter implements StatsEventListener {
         } catch (error) {
             this.logger.error("failed to send metrics: %s", error);
         }
-
-        this.logger.info("!!! ZenossStatsExporter.sendTaggedMetrics() - end", taggedMetrics.length)
     }
 
     stop(): void {
