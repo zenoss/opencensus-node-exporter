@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.0.4
+- Change source-type to zenoss/opencensus-node-exporter.
+- Small improvements to create-policy.sh script.
+- Add LICENSE file to match package's Apache-2.0 license.
+
 ## v0.0.3
 - Remove leftover debug logging.
 

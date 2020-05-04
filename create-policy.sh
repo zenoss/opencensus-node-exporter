@@ -1,13 +1,33 @@
 #!/usr/bin/env bash
+#
+# This script provides an example of creating (and deleting) Zenoss policy
+# to handle the tagged metrics sent by @zenoss/opencensus-node-exporter.
+#
+# The policy assumes you have set the "source" option of your exporter, and
+# that all of your metrics are tagged with an "app" tag, or you're adding the
+# "app" tag via the exporter's "extraTags" option.
+#
+# This will result in an entity being created that represents the source/app
+# combination, and metrics being attributed to that entity.
+#
+# ZENOSS_ADDRESS can be overridden, but defaults to https://api.zenoss.io
+#
+# You must set the ZENOSS_API_KEY environment variable.
 
-export ZENOSS_ADDRESS="https://api.zenoss.io"
-export ZENOSS_API_KEY="YOUR-ZENOSS-API-KEY"
+ZENOSS_ADDRESS="${ZENOSS_ADDRESS:-https://api.zenoss.io}"
 
+if [ -z "$ZENOSS_API_KEY" ]; then
+    echo "ZENOSS_API_KEY must be set."
+    exit 1
+fi
+
+# Create API helper functions.
 zenoss-api-post () {
   echo "POST $1"
   curl "$ZENOSS_ADDRESS$1" \
     -H "zenoss-api-key: $ZENOSS_API_KEY" \
     -k -s -X POST -d @-
+  echo
 }
 
 zenoss-api-put () {
@@ -15,6 +35,7 @@ zenoss-api-put () {
   curl "$ZENOSS_ADDRESS$1" \
     -H "zenoss-api-key: $ZENOSS_API_KEY" \
     -k -s -X PUT -d @-
+  echo
 }
 
 zenoss-api-delete () {
@@ -22,6 +43,7 @@ zenoss-api-delete () {
   curl "$ZENOSS_ADDRESS$1" \
     -H "zenoss-api-key: $ZENOSS_API_KEY" \
     -k -s -X DELETE
+  echo
 }
 
 # Delete policies if first argument is -d.

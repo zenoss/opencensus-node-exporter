@@ -1,6 +1,6 @@
 {
   "name": "@zenoss/opencensus-node-exporter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An OpenCensus Node.js stats exporter for Zenoss.",
   "author": "Zenoss, Inc.",
   "license": "Apache-2.0",
@@ -32,7 +32,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo No tests."
   },
   "devDependencies": {
     "@types/continuation-local-storage": "^3.2.2",

@@ -38,7 +38,7 @@ export interface ZenossStatsExporterOptions extends ExporterConfig {
 export class ZenossStatsExporter implements StatsEventListener {
     static readonly DEFAULT_ADDRESS: string = "https://api.zenoss.io"
     static readonly DEFAULT_PERIOD: number = 60000;
-    static readonly DEFAULT_SOURCE_TYPE: string = "zenoss/opencensus-node-exporter-zenoss";
+    static readonly DEFAULT_SOURCE_TYPE: string = "zenoss/opencensus-node-exporter";
 
     static readonly API_KEY_FIELD: string = "zenoss-api-key";
     static readonly SOURCE_FIELD: string = "source";
