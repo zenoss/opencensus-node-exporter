@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.0.5
+- Fix incorrect setting of zenoss-api-key header.
+
 ## v0.0.4
 - Change source-type to zenoss/opencensus-node-exporter.
 - Small improvements to create-policy.sh script.

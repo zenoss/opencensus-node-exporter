@@ -177,7 +177,7 @@ export class ZenossStatsExporter implements StatsEventListener {
         const metricsUrl = this.address + "/v1/data-receiver/metrics";
         const headers: {[key: string]: string} = {};
         if (this.apiKey) {
-            headers[ZenossStatsExporter.DEFAULT_SOURCE_TYPE] = this.apiKey;
+            headers[ZenossStatsExporter.API_KEY_FIELD] = this.apiKey;
         }
 
         try {
