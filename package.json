@@ -1,6 +1,6 @@
 {
   "name": "@zenoss/opencensus-node-exporter",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "An OpenCensus Node.js stats exporter for Zenoss.",
   "author": "Zenoss, Inc.",
   "license": "Apache-2.0",
@@ -38,10 +38,10 @@
     "@types/continuation-local-storage": "^3.2.2",
     "@types/node": "^13.11.1",
     "@types/node-fetch": "^2.5.7",
-    "typescript": "~3.1.0"
+    "typescript": "^3.1.0"
   },
   "dependencies": {
-    "@opencensus/core": "^0.0.9",
+    "@opencensus/core": "^0.1.0",
     "node-fetch": "^2.6.0"
   }
 }
