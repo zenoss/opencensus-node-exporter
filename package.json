@@ -42,6 +42,6 @@
   },
   "dependencies": {
     "@opencensus/core": "^0.0.9",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^3.1.1"
   }
 }
